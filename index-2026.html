@@ -36,6 +36,7 @@
 .hero .btn-secondary:hover{background:rgba(255,255,255,.12)}
 .hero-points{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.25rem}
 .hero-points span{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .85rem;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.92rem;color:rgba(255,255,255,.9)}
+.hero-video{width:min(100%,900px);margin:1rem auto 0;border-color:rgba(255,255,255,.18)}
 .panel,.card,.faq,.form-shell{background:var(--surface);border:1px solid var(--border);border-radius:calc(var(--r) + .25rem);box-shadow:var(--shadow)}
 .badge{display:inline-flex;padding:.45rem .8rem;border-radius:999px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
 .metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -148,23 +149,7 @@ textarea{min-height:120px;resize:vertical}
         <a class="btn btn-primary" href="#servicios">Ver servicios</a>
         <a class="btn btn-secondary" href="#contacto">Contactar</a>
       </div>
-      <div class="hero-points">
-        <span>Carga IMO</span>
-        <span>Carga general</span>
-        <span>Almacenaje</span>
-        <span>Rastreo en línea</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="video-institucional">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Video institucional</span>
-        <h2>Conoce a Transportes Norte en movimiento.</h2>
-        <p>Una mirada cercana a nuestra operación, equipo humano y capacidad logística desplegada en todo Chile.</p>
-      </div>
-      <div class="video-wrapper" data-reveal>
+      <div class="video-wrapper hero-video" data-reveal>
         <iframe src="https://www.youtube.com/embed/edq-soCsnas?autoplay=1&mute=1" title="Video Institucional Transportes Norte" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
