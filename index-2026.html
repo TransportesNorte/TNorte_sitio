@@ -100,7 +100,7 @@ textarea{min-height:120px;resize:vertical}
 .clients-strip{position:relative;overflow:hidden;border-radius:calc(var(--r) + .25rem);border:1px solid var(--border);box-shadow:var(--shadow);background:var(--surface);padding:1.5rem 0}
 .clients-track{display:inline-flex;align-items:center;gap:3rem;white-space:nowrap;animation:scroll 35s linear infinite;padding-left:3rem}
 .client-thumb{display:inline-flex;align-items:center;justify-content:center}
-.client-thumb img{height:64px;width:auto;object-fit:contain;filter:grayscale(100%);opacity:.6;transition:all .3s}
+.client-thumb img{height:64px;width:auto;max-width:none;object-fit:contain;filter:grayscale(100%);opacity:.6;transition:all .3s}
 .client-thumb:hover img{filter:grayscale(0%);opacity:1}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .footer{padding:3rem 0 4rem;border-top:1px solid #e3dcd2;background:var(--surface2)}
