@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transportes Norte | Transporte, Logística y Almacenaje</title>
+    <meta name="description" content="Transportes Norte es una empresa familiar chilena especializada en transporte de carga terrestre y almacenamiento logístico a nivel local y nacional." />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=zodiak@500,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f7f6f2;
+            --surface: #fffdf9;
+            --surface2: #f2ede6;
+            --text: #201d18;
+            --muted: #66615a;
+            --border: #ddd5cb;
+            --primary: #ef5b0c;
+            --primary2: #d94d00;
+            --accent: #dc2d1e;
+            --dark: #17120f;
+            --shadow: 0 18px 40px rgba(20, 12, 8, .08);
+            --r: 1.35rem;
+            --container: 1180px;
+            --body: 'General Sans', sans-serif;
+            --display: 'Zodiak', serif;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: var(--body); background: var(--bg); color: var(--text); line-height: 1.6; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; transition: color 0.3s; }
+        
+        .container { width: min(calc(100% - 2rem), var(--container)); margin: auto; }
+        .section { padding: clamp(3rem, 8vw, 6rem) 0; }
+        
+        /* Typography */
+        h1, h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0 0 1rem; color: var(--text); }
+        h1 { font-size: clamp(2.5rem, 4vw, 4rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 3vw, 2.5rem); }
+        h3 { font-size: 1.25rem; font-family: var(--body); font-weight: 600; }
+        p { margin: 0 0 1rem; color: var(--muted); }
+        
+        /* UI Elements */
+        .eyebrow { display: inline-flex; padding: .45rem .8rem; border-radius: 999px; background: linear-gradient(135deg, #fde0d2, #fff1e7); color: var(--primary); font-weight: 700; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .95rem 1.5rem; border-radius: 999px; font-weight: 700; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; font-family: inherit; font-size: 1rem;}
+        .btn:hover:not(:disabled) { transform: translateY(-2px); }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; box-shadow: 0 10px 20px rgba(239, 91, 12, .2); }
+        .btn-secondary { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: #fff; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+        
+        /* Header */
+        .header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--bg) 84%, transparent); border-bottom: 1px solid transparent; transition: all 0.3s; }
+        .header.scrolled { border-color: #e5ddd2; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+        .header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .brand img { max-height: 48px; width: auto; object-fit: contain; }
+        .nav { display: flex; gap: 2rem; color: var(--muted); font-weight: 500; }
+        .nav a:hover { color: var(--primary); }
+        
+        /* Layout Grids */
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        
+        /* Components */
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 2rem; box-shadow: var(--shadow); transition: transform 0.3s ease; height: 100%; }
+        .card:hover { transform: translateY(-5px); }
+        .card-icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 12px; background: color-mix(in srgb, var(--primary) 15%, transparent); color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .img-rounded { border-radius: var(--r); box-shadow: var(--shadow); object-fit: cover; width: 100%; }
+        
+        .doc-thumb { aspect-ratio: 1658 / 2145; object-fit: cover; width: 100%; max-width: 250px; margin: 0 auto; display: block; border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow); transition: transform 0.3s ease; }
+        .doc-thumb:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+        /* Video Container */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--r); box-shadow: var(--shadow); margin-top: 2rem; border: 4px solid rgba(255,255,255,0.1); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Hero Section */
+        .hero { position: relative; padding: clamp(4rem, 8vw, 8rem) 0; text-align: center; background-image: url('images/tn/bg-camiontn.PNG'); background-size: cover; background-position: center; color: #fff; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.85) 0%, rgba(23,18,15,0.65) 100%); }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { max-width: 800px; margin: 0 auto 1.5rem; color: #fff; }
+        .hero p { max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; color: rgba(255,255,255,0.9); }
+        
+        /* Iso Banner */
+        .iso-banner { position: relative; background-image: url('images/tn/bg-3.PNG'); background-size: cover; background-position: center; color: white; padding: 4rem 0; text-align: center; border-radius: var(--r); margin: 3rem 0; box-shadow: var(--shadow); overflow: hidden; }
+        .iso-banner::before { content: ''; position: absolute; inset: 0; background: rgba(23, 18, 15, 0.85); }
+        .iso-content { position: relative; z-index: 1; }
+        .iso-content h2 { color: white; margin-bottom: 0.5rem; }
+        .iso-content p { color: rgba(255,255,255,0.8); margin: 0 auto; max-width: 600px; }
+        
+        /* Infinite Carousel */
+        .carousel-container { overflow: hidden; white-space: nowrap; width: 100%; padding: 2rem 0; position: relative; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .carousel-track { display: inline-block; animation: scroll 30s linear infinite; }
+        .client-thumb { display: inline-block; margin: 0 2rem; vertical-align: middle; }
+        .client-thumb img { height: 50px; width: auto; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s; }
+        .client-thumb:hover img { filter: grayscale(0%); opacity: 1; }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Forms & Contact */
+        .split { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+        .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        
+        .form-shell { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 2.5rem; box-shadow: var(--shadow); }
+        .form-header { margin-bottom: 2rem; }
+        .form-header h3 { font-family: var(--display); font-size: 1.8rem; margin: 0.5rem 0 0; color: var(--text); }
+        
+        .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+        .field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
+        .field label { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+        .field-hint { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+        
+        .form-control { width: 100%; padding: 1rem 1.2rem; border: 1px solid var(--border); border-radius: 0.8rem; background: var(--surface); color: var(--text); font-family: var(--body); font-size: 1rem; transition: border-color 0.3s, box-shadow 0.3s; }
+        .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(239,91,12,.1); }
+        textarea.form-control { min-height: 120px; resize: vertical; }
+        
+        .form-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; padding: 1.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+        .form-summary div { display: flex; flex-direction: column; gap: 0.2rem; }
+        .form-summary strong { color: var(--primary); font-weight: 700; }
+        
+        .form-alert { display: none; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1.5rem; font-weight: 500; }
+        .form-alert.success { display: block; background: #e6f4ea; border: 1px solid #ceead6; color: #137333; }
+        .form-alert.error { display: block; background: #fce8e6; border: 1px solid #fad2cf; color: #c5221f; }
+
+        /* Left Sidebar Info Lists */
+        .info-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; margin-bottom: 2.5rem; }
+        .info-item strong { display: block; color: var(--text); font-family: var(--body); font-size: 1.05rem; margin-bottom: 0.3rem; }
+        .info-item span, .info-item ul { color: var(--muted); font-size: 0.95rem; }
+        .info-item ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+        .info-item a { transition: color 0.2s; }
+        .info-item a:hover { color: var(--primary); }
+
+        /* Footer Grid Strict */
+        .footer { background: var(--surface2); padding: 4rem 0; border-top: 1px solid var(--border); }
+        .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; align-items: start; }
+        .footer h4 { font-family: var(--body); margin: 0 0 1.2rem; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text); }
+        .footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem; }
+        .footer-links li { color: var(--muted); }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid-2, .grid-3, .grid-4, .footer-grid, .split { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; gap: 0; }
+            .form-summary { grid-template-columns: 1fr; }
+            .nav { display: none; } 
+        }
+    </style>
+</head>
+<body>
+
+<header class="header" id="top">
+    <div class="container header-inner">
+        <a class="brand" href="#top">
+            <img src="images/tn/logotn.PNG" alt="Transportes Norte">
+        </a>
+        <nav class="nav">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn btn-primary" href="https://wa.me/56949884100" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.829 6.315L0 24l5.867-1.748A11.96 11.96 0 0 0 11.944 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm.056 21.94c-1.895 0-3.753-.497-5.405-1.442l-.388-.225-3.376 1.006.91-3.238-.256-.402A9.907 9.907 0 0 1 2.056 12C2.056 6.51 6.51 2.056 12 2.056S21.944 6.51 21.944 12c0 5.49-4.454 9.94-9.944 9.94zm5.45-7.44c-.298-.15-1.764-.87-2.036-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.29-.34.44-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.22-.24-.59-.49-.51-.67-.52-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.28.3-1.07 1.05-1.07 2.56s1.1 2.97 1.25 3.17c.15.2 2.16 3.3 5.24 4.63.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.17-.57-.32z"/></svg>
+            Cotizar ahora
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.2);">Especialistas en transporte de carga</span>
+            <h1>Logística Innovadora al servicio de tus desafíos</h1>
+            <p>Transportes Norte es una empresa familiar chilena fundada en 2009, especializada en el transporte de carga terrestre y almacenamiento logístico tanto a nivel local como nacional. Resolvemos problemas de forma transparente y efectiva.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <a class="btn btn-primary" href="#servicios">Ver Servicios</a>
+                <a class="btn btn-secondary" href="#contacto">Contactar</a>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/edq-soCsnas?autoplay=1&mute=1" title="Video Institucional Transportes Norte" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="section">
+        <div class="container">
+            <div class="grid-2" style="margin-bottom: 4rem;">
+                <div>
+                    <span class="eyebrow">Nuestra Empresa</span>
+                    <h2>Conoce nuestra empresa</h2>
+                    <p>Transportes Norte es una empresa de carácter familiar. Especializada en transporte y almacenaje de carga, ya sea a nivel local y nacional. Esta especialización conlleva un conocimiento profundo de las normativas de transporte, logística eficiente, gestión de inventarios y seguridad en el manejo de carga.</p>
+                    <img src="images/tn/bg-4.PNG" alt="Equipo de Transportes Norte" class="img-rounded" style="margin-top: 2rem;">
+                </div>
+                <div>
+                    <div class="grid-2" style="gap: 1rem; margin-bottom: 2rem;">
+                        <div class="card" style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary);">Visión</h3>
+                            <p style="font-size: 0.95rem;">Ser una organización líder en servicios de logística integral, reconocidos a nivel internacional por su capacidad de innovar, adaptar y responder plenamente a las necesidades de sus diversos tipos de clientes.</p>
+                        </div>
+                        <div class="card" style="padding: 1.5rem;">
+                            <h3 style="color: var(--primary);">Misión</h3>
+                            <p style="font-size: 0.95rem;">Desarrollar y elaborar una cadena de logística integral sólida e innovadora, de la más alta calidad, que contribuyan a mejorar los servicios y/o producción de nuestros clientes.</p>
+                        </div>
+                    </div>
+                    <a href="images/vision.jpg" target="_blank" title="Ver documento de Visión y Misión">
+                        <img src="images/vision.jpg" alt="Documento Misión y Visión" class="doc-thumb">
+                    </a>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem; font-family: var(--display);">Nuestra Cultura Empresarial</h3>
+            <div class="grid-4">
+                <div class="card">
+                    <h3>Cultura y Valores</h3>
+                    <p>Nos basamos en valores como la confianza, la integridad y el compromiso, estableciendo relaciones a largo plazo con clientes y empleados.</p>
+                </div>
+                <div class="card">
+                    <h3>Flexibilidad</h3>
+                    <p>Somos flexibles y capaces de adaptarnos rápidamente a los cambios del mercado y a las necesidades específicas de nuestros clientes.</p>
+                </div>
+                <div class="card">
+                    <h3>Atención Personalizada</h3>
+                    <p>Nuestros clientes reciben un trato directo y cercano por parte de los propietarios y empleados de la empresa.</p>
+                </div>
+                <div class="card">
+                    <h3>Innovación y Tecnología</h3>
+                    <p>Contamos con tecnologías y practices innovadoras para mejorar la eficiencia operativa y la calidad del servicio.</p>
+                </div>
+            </div>
+
+            <div class="iso-banner grid-2">
+                <div class="iso-content" style="text-align: left; padding: 0 3rem;">
+                    <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: #fff;">Política de Calidad</span>
+                    <h2>Certificación ISO 9001-2015</h2>
+                    <p>La calidad de nuestro servicio y la seguridad en el transporte de carga son nuestras prioridades fundamentales. Contamos con altos estándares y certificaciones necesarias para potenciar nuestro servicio bajo normativas internacionales.</p>
+                </div>
+                <div class="iso-content" style="padding: 0 3rem;">
+                    <a href="images/calidad.jpg" target="_blank" title="Ver Política de Calidad">
+                        <img src="images/calidad.jpg" alt="Documento de Política de Calidad" class="doc-thumb" style="border: 2px solid rgba(255,255,255,0.2);">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section" style="background: var(--surface2);">
+        <div class="container">
+            <div class="grid-2" style="margin-bottom: 3rem;">
+                <div>
+                    <span class="eyebrow">Lo que hacemos</span>
+                    <h2>Especialistas en el transporte de carga</h2>
+                    <p>Transportamos tu carga en todo el país. Tenemos una potente cadena de distribución de carga a tu disposición, adaptándonos a las necesidades de cada proyecto operativo.</p>
+                </div>
+                <div>
+                    <img src="images/tn/bg-2.PNG" alt="Operaciones de carga Transportes Norte" class="img-rounded" style="max-height: 200px;">
+                </div>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Cargas IMO</h3>
+                    <p>Especialistas en el transporte de cargas peligrosas las cuales implican riesgo para la seguridad y salud de las personas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚛</div>
+                    <h3>Carga General</h3>
+                    <p>Transporte general de carga con tarifas exclusivas de acuerdo a las necesidades y requerimiento del cliente.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Carga Compartida</h3>
+                    <p>Servicio de transporte de carga compartida con otros clientes, con tarifas a la medida del cargo a transportar.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📦</div>
+                    <h3>Almacenamiento</h3>
+                    <p>Servicio de almacenamiento normal y en frío, además de custodia de carga en nuestras instalaciones.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h3>Rastreo en Línea</h3>
+                    <p>Revisa y conoce dónde está tu carga en el momento que desees. Ponemos a disposición las herramientas para tu gestión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clientes" class="section" style="padding-bottom: 0;">
+        <div class="container" style="text-align: center; margin-bottom: 2rem;">
+            <span class="eyebrow">Confían en nosotros</span>
+            <h2>Conoce nuestros clientes</h2>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <figure class="client-thumb"><img src="images/dsv.PNG" alt="DSV"></figure>
+                <figure class="client-thumb"><img src="images/maf.PNG" alt="Maschinenfabrik"></figure>
+                <figure class="client-thumb"><img src="images/chr.PNG" alt="C.H. Robinson"></figure>
+                <figure class="client-thumb"><img src="images/deu.jpg" alt="Deugro"></figure>
+                <figure class="client-thumb"><img src="images/rhe.PNG" alt="Rhenus Logistics"></figure>
+                <figure class="client-thumb"><img src="images/alma.PNG" alt="Observatorio ALMA"></figure>
+                <figure class="client-thumb"><img src="images/gol.PNG" alt="Goldwind"></figure>
+                <figure class="client-thumb"><img src="images/mar.PNG" alt="Marval"></figure>
+                <figure class="client-thumb"><img src="images/ber.PNG" alt="Bertling"></figure>
+                <figure class="client-thumb"><img src="images/bol.PNG" alt="Bollore Logistics"></figure>
+                
+                <figure class="client-thumb"><img src="images/dsv.PNG" alt="DSV"></figure>
+                <figure class="client-thumb"><img src="images/maf.PNG" alt="Maschinenfabrik"></figure>
+                <figure class="client-thumb"><img src="images/chr.PNG" alt="C.H. Robinson"></figure>
+                <figure class="client-thumb"><img src="images/deu.jpg" alt="Deugro"></figure>
+                <figure class="client-thumb"><img src="images/rhe.PNG" alt="Rhenus Logistics"></figure>
+                <figure class="client-thumb"><img src="images/alma.PNG" alt="Observatorio ALMA"></figure>
+                <figure class="client-thumb"><img src="images/gol.PNG" alt="Goldwind"></figure>
+                <figure class="client-thumb"><img src="images/mar.PNG" alt="Marval"></figure>
+                <figure class="client-thumb"><img src="images/ber.PNG" alt="Bertling"></figure>
+                <figure class="client-thumb"><img src="images/bol.PNG" alt="Bollore Logistics"></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacto">
+  <div class="container">
+    <div class="split">
+      <div class="cta" data-reveal>
+        <span class="eyebrow" style="background:var(--primary);color:#fff">Contacto</span>
+        <h2 style="font-family:var(--display);font-size:clamp(1.7rem,1.2rem + 1.5vw,2.5rem);line-height:1.05;margin:1rem 0">Cotiza con Transportes Norte</h2>
+        <p>¿Tienes un proyecto logístico en mente? Contáctanos directamente y nuestro equipo te asesorará de forma inmediata.</p>
+        
+        <div class="info-list">
+            <div class="info-item">
+                <strong>📍 Ubicación y Bodegas</strong>
+                <span>Los Eucaliptos #700, bodega 21, Quilicura, Santiago</span>
+            </div>
+            
+            <div class="info-item">
+                <strong>📞 Teléfonos Directos</strong>
+                <span>+56 9 49884100 &nbsp;·&nbsp; +56 9 92301634</span>
+            </div>
+
+            <div class="info-item">
+                <strong>✉️ Correos de Atención</strong>
+                <ul>
+                    <li><strong>Comercial:</strong> <a href="mailto:jcurinao@transportesnorte.cl">jcurinao@transportesnorte.cl</a></li>
+                    <li><strong>General:</strong> <a href="mailto:contactenos@transportesnorte.cl">contactenos@transportesnorte.cl</a></li>
+                    <li><strong>Sugerencias:</strong> <a href="mailto:reclamosysugerencias@transportesnorte.cl">reclamosysugerencias@transportesnorte.cl</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/56949884100?text=Hola%20Transportes%20Norte%2C%20quiero%20cotizar%20sus%20servicios." target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.829 6.315L0 24l5.867-1.748A11.96 11.96 0 0 0 11.944 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zm.056 21.94c-1.895 0-3.753-.497-5.405-1.442l-.388-.225-3.376 1.006.91-3.238-.256-.402A9.907 9.907 0 0 1 2.056 12C2.056 6.51 6.51 2.056 12 2.056S21.944 6.51 21.944 12c0 5.49-4.454 9.94-9.944 9.94zm5.45-7.44c-.298-.15-1.764-.87-2.036-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.29-.34.44-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.22-.24-.59-.49-.51-.67-.52-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.28.3-1.07 1.05-1.07 2.56s1.1 2.97 1.25 3.17c.15.2 2.16 3.3 5.24 4.63.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.17-.57-.32z"/></svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="/images/Acuerdo de Privacidad TN.pdf" target="_blank" class="btn btn-secondary" style="background:var(--surface2);border-color:var(--border);color:var(--text);">
+            📄 Acuerdo de Privacidad
+          </a>
+        </div>
+      </div>
+      
+      <div class="form-shell form-premium" data-reveal>
+        <div class="form-header">
+          <span class="eyebrow">Atención Comercial</span>
+          <h3>Cotiza tu proyecto logístico</h3>
+          <p>Detalla tus requerimientos de carga, almacenaje o distribución. Nuestro equipo evaluará la mejor solución para tu cadena de suministro.</p>
+        </div>
+        <div id="formAlert" class="form-alert" role="status" aria-live="polite">¡Formulario enviado con éxito! Nos pondremos en contacto pronto.</div>
+        
+        <form id="leadForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="nombre">Nombre *</label>
+              <input id="nombre" name="nombre" class="form-control" required placeholder="Tu nombre y apellido" />
+              <small class="field-hint">Persona de contacto encargada del proyecto.</small>
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" class="form-control" placeholder="Razón social o nombre comercial" />
+              <small class="field-hint">Para emitir la cotización formal adecuadamente.</small>
+            </div>
+            <div class="field">
+              <label for="correo">Correo Electrónico *</label>
+              <input id="correo" name="correo" type="email" class="form-control" required placeholder="nombre@empresa.cl" />
+              <small class="field-hint">Donde recibirás nuestra propuesta comercial.</small>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono *</label>
+              <input id="telefono" name="telefono" class="form-control" required placeholder="+56 9 ..." />
+              <small class="field-hint">Para coordinación directa y resolución de dudas.</small>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="servicio">Servicio de interés *</label>
+              <select id="servicio" name="servicio" class="form-control" required>
+                <option value="">Selecciona una opción</option>
+                <option>Cargas IMO</option>
+                <option>Carga General</option>
+                <option>Carga Compartida</option>
+                <option>Almacenamiento</option>
+                <option>Logística Limpia (Flota Eléctrica)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="comuna">Origen / Destino</label>
+              <input id="comuna" name="comuna" class="form-control" placeholder="Ej. Quilicura a Antofagasta" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Detalles de la carga *</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" required placeholder="Cuéntanos qué necesitas transportar o almacenar..."></textarea>
+            <small class="field-hint">Idealmente incluye volumen, tonelaje, tipo de mercadería y plazos requeridos.</small>
+          </div>
+
+          <div class="form-summary">
+            <div><strong>Respuesta:</strong><span>Evaluación rápida y directa</span></div>
+            <div><strong>Cobertura:</strong><span>Local y Nacional</span></div>
+            <div><strong>Calidad:</strong><span>Certificación ISO 9001-2015</span></div>
+          </div>
+
+          <div class="hero-actions form-actions" style="margin-top: 0;">
+            <button class="btn btn-primary" type="submit" id="submitBtn" style="width: 100%;">Enviar solicitud de cotización</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <img src="images/tn/logotn.PNG" alt="Transportes Norte" style="max-height: 60px; margin-bottom: 1rem;">
+            <p>Logística innovadora y transporte de carga con los más altos estándares de calidad.</p>
+        </div>
+        
+        <div>
+            <h4>Transportes Norte</h4>
+            <ul class="footer-links">
+                <li><a href="#nosotros">Nuestra Empresa</a></li>
+                <li><a href="#servicios">Servicios Logísticos</a></li>
+                <li><a href="#clientes">Clientes que confían</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Atención al Cliente</h4>
+            <ul class="footer-links">
+                <li><a href="https://wa.me/56949884100" target="_blank" rel="noopener">Soporte WhatsApp</a></li>
+                <li><a href="#contacto">Formulario de Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Efecto del header al hacer scroll
+    const header = document.querySelector('.header');
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }, { passive: true });
+
+    // Inicialización al cargar el DOM
+    document.addEventListener('DOMContentLoaded', () => {
+        // Demo form submission logic to show the form-alert UI
+        const leadForm = document.getElementById('leadForm');
+        if (leadForm) {
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Remove this line when hooked to a backend
+                const alertBox = document.getElementById('formAlert');
+                alertBox.className = 'form-alert success';
+                alertBox.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+                leadForm.reset();
+            });
+        }
+    });
+</script>
+</body>
+</html>
