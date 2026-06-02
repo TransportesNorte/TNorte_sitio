@@ -25,21 +25,18 @@
 .actions{display:flex;gap:.75rem;align-items:center}
 .theme-toggle,.menu-toggle{width:44px;height:44px;border-radius:999px;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;color:var(--text);cursor:pointer}
 .menu-toggle{display:none}
-.hero{padding-top:clamp(2.5rem,5vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:1.5rem;align-items:stretch}
-.hero-copy,.panel,.card,.faq,.form-shell{background:var(--surface);border:1px solid var(--border);border-radius:calc(var(--r) + .25rem);box-shadow:var(--shadow)}
-.hero-copy{padding:clamp(1.5rem,4vw,3rem);display:grid;gap:1.25rem;position:relative;overflow:hidden;background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 82%,white 18%),color-mix(in srgb,#fde0d2 42%,var(--surface2)))}
-.hero-copy:before,.hero-copy:after{content:'';position:absolute;border-radius:50%;pointer-events:none}
-.hero-copy:before{width:260px;height:260px;right:-70px;top:-70px;background:radial-gradient(circle,var(--gold),transparent 68%);opacity:.18}
-.hero-copy:after{width:240px;height:240px;left:-80px;bottom:-90px;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.12}
-.hero h1{font-family:var(--display);font-size:clamp(2.2rem,1.5rem + 3.3vw,4.4rem);line-height:1.02;letter-spacing:-.03em;margin:0;max-width:14ch;position:relative;z-index:1}
-.hero p{margin:0;color:var(--muted);position:relative;z-index:1}
-.hero-actions,.hero-points{display:flex;flex-wrap:wrap;gap:.75rem;position:relative;z-index:1}
-.hero-points span{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .75rem;border-radius:999px;background:color-mix(in srgb,#fde0d2 55%,var(--surface));border:1px solid var(--border);font-size:.92rem;color:var(--muted)}
-.hero-visual{position:relative;border-radius:calc(var(--r) + .25rem);overflow:hidden;min-height:100%;background:linear-gradient(145deg,var(--dark),#2a1a14);box-shadow:var(--shadow)}
-.hero-visual img{width:100%;height:100%;object-fit:cover;min-height:560px;filter:brightness(.7)}
-.hero-overlay{position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(20,10,6,.6))}
-.hero-overlay-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.hero{position:relative;padding:clamp(4rem,8vw,8rem) 0;text-align:center;background-image:url('images/tn/bg-camiontn.PNG');background-size:cover;background-position:center;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,18,15,.85) 0%,rgba(23,18,15,.65) 100%)}
+.hero-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.25rem}
+.hero .eyebrow{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--display);font-size:clamp(2.2rem,1.5rem + 3.3vw,4.4rem);line-height:1.02;letter-spacing:-.03em;margin:0 auto;max-width:18ch;color:#fff}
+.hero p{margin:0 auto;max-width:60ch;color:rgba(255,255,255,.9)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:.5rem}
+.hero .btn-secondary{color:#fff;border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.05)}
+.hero .btn-secondary:hover{background:rgba(255,255,255,.12)}
+.hero-points{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:.25rem}
+.hero-points span{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .85rem;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.92rem;color:rgba(255,255,255,.9)}
+.panel,.card,.faq,.form-shell{background:var(--surface);border:1px solid var(--border);border-radius:calc(var(--r) + .25rem);box-shadow:var(--shadow)}
 .badge{display:inline-flex;padding:.45rem .8rem;border-radius:999px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
 .metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .metric{padding:1rem;border:1px solid rgba(255,255,255,.12);border-radius:1rem;background:linear-gradient(180deg,rgba(239,91,12,.22),rgba(220,45,30,.16));backdrop-filter:blur(8px);color:#fff}
@@ -111,8 +108,8 @@ textarea{min-height:120px;resize:vertical}
 .footer-links{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
 [data-reveal]{opacity:0;transform:translateY(18px);transition:.6s ease}
 [data-reveal].is-visible{opacity:1;transform:none}
-@media (max-width:1024px){.hero-grid,.split,.footer-grid,.grid-3,.grid-4,.grid-2,.iso-cta{grid-template-columns:1fr 1fr}.metric-row{grid-template-columns:1fr}}
-@media (max-width:760px){.nav{position:absolute;inset:calc(100% + .5rem) 1rem auto 1rem;display:none;flex-direction:column;background:var(--surface);padding:1rem;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}.nav.open{display:flex}.menu-toggle{display:grid}.hero-grid,.split,.footer-grid,.grid-3,.grid-4,.grid-2,.iso-cta,.form-grid{grid-template-columns:1fr}.header .btn-whatsapp,.header .btn-primary{display:none}.hero-visual img{min-height:360px}.hero-actions .btn,.form-actions .btn{width:100%}}
+@media (max-width:1024px){.split,.footer-grid,.grid-3,.grid-4,.grid-2,.iso-cta{grid-template-columns:1fr 1fr}.metric-row{grid-template-columns:1fr}}
+@media (max-width:760px){.nav{position:absolute;inset:calc(100% + .5rem) 1rem auto 1rem;display:none;flex-direction:column;background:var(--surface);padding:1rem;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}.nav.open{display:flex}.menu-toggle{display:grid}.split,.footer-grid,.grid-3,.grid-4,.grid-2,.iso-cta,.form-grid{grid-template-columns:1fr}.header .btn-whatsapp,.header .btn-primary{display:none}.hero-actions .btn,.form-actions .btn{width:100%}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}[data-reveal]{opacity:1;transform:none}.clients-track{animation:none}}
 </style>
 </head>
@@ -143,35 +140,19 @@ textarea{min-height:120px;resize:vertical}
 <main id="contenido">
 
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy" data-reveal>
-        <span class="eyebrow">Especialistas en transporte de carga</span>
-        <h1>Logística innovadora al servicio de tus desafíos.</h1>
-        <p>Transportes Norte es una empresa familiar chilena fundada en 2009, especializada en el transporte de carga terrestre y almacenamiento logístico tanto a nivel local como nacional. Resolvemos problemas de forma transparente y efectiva.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#servicios">Ver servicios</a>
-          <a class="btn btn-secondary" href="#contacto">Contactar</a>
-        </div>
-        <div class="hero-points">
-          <span>Carga IMO</span>
-          <span>Carga general</span>
-          <span>Almacenaje</span>
-          <span>Rastreo en línea</span>
-        </div>
+    <div class="container hero-content" data-reveal>
+      <span class="eyebrow">Especialistas en transporte de carga</span>
+      <h1>Logística innovadora al servicio de tus desafíos.</h1>
+      <p>Transportes Norte es una empresa familiar chilena fundada en 2009, especializada en el transporte de carga terrestre y almacenamiento logístico tanto a nivel local como nacional. Resolvemos problemas de forma transparente y efectiva.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#servicios">Ver servicios</a>
+        <a class="btn btn-secondary" href="#contacto">Contactar</a>
       </div>
-      <div class="hero-visual" data-reveal>
-        <img src="images/tn/bg-camiontn.PNG" alt="Camión de Transportes Norte">
-        <div class="hero-overlay">
-          <div class="hero-overlay-top">
-            <span class="badge">Empresa familiar chilena</span>
-            <img src="images/tn/logo-1x1.png" alt="Logo Transportes Norte" style="width:64px;height:64px;object-fit:contain;background:rgba(255,255,255,.08);padding:.6rem;border-radius:1rem;border:1px solid rgba(255,255,255,.1)">
-          </div>
-          <div class="metric-row">
-            <div class="metric"><strong>2009</strong><span>Fundación</span></div>
-            <div class="metric"><strong>ISO</strong><span>9001-2015</span></div>
-            <div class="metric"><strong>24/7</strong><span>Atención</span></div>
-          </div>
-        </div>
+      <div class="hero-points">
+        <span>Carga IMO</span>
+        <span>Carga general</span>
+        <span>Almacenaje</span>
+        <span>Rastreo en línea</span>
       </div>
     </div>
   </section>
