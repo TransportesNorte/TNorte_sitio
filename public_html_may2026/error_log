@@ -1,0 +1,113 @@
+[29-Feb-2024 20:15:43 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[29-Feb-2024 20:15:43 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[03-Mar-2024 08:06:46 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[03-Mar-2024 08:06:46 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[04-Mar-2024 16:00:14 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[04-Mar-2024 16:00:14 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[05-Mar-2024 14:26:16 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[05-Mar-2024 14:26:16 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[05-Mar-2024 14:27:30 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[05-Mar-2024 14:27:30 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[05-Mar-2024 15:33:56 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/mail.php on line 3
+[05-Mar-2024 15:33:56 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/mail.php on line 3
+[05-Mar-2024 15:33:56 America/Santiago] PHP Warning:  include(): Failed opening 'phpmailer/PHPMailer.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/transpo8/public_html/mail.php on line 3
+[05-Mar-2024 15:40:54 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/mail.php on line 3
+[05-Mar-2024 15:40:54 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/mail.php on line 3
+[05-Mar-2024 15:40:54 America/Santiago] PHP Warning:  include(): Failed opening 'phpmailer/PHPMailer.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/transpo8/public_html/mail.php on line 3
+[05-Mar-2024 16:40:22 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/Mail.php on line 3
+[05-Mar-2024 16:40:22 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/Mail.php on line 3
+[05-Mar-2024 16:40:22 America/Santiago] PHP Warning:  include(): Failed opening 'phpmailer/PHPMailer.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/transpo8/public_html/Mail.php on line 3
+[05-Mar-2024 16:40:22 America/Santiago] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home/transpo8/public_html/Mail.php:8
+Stack trace:
+#0 /home/transpo8/public_html/datos.php(14): Mail::enviarCorreo(Array, 'Transportes Nor...', 'Hemos recibido ...')
+#1 {main}
+  thrown in /home/transpo8/public_html/Mail.php on line 8
+[05-Mar-2024 16:45:16 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/Mail.php on line 3
+[05-Mar-2024 16:45:16 America/Santiago] PHP Warning:  include(phpmailer/PHPMailer.php): failed to open stream: No such file or directory in /home/transpo8/public_html/Mail.php on line 3
+[05-Mar-2024 16:45:16 America/Santiago] PHP Warning:  include(): Failed opening 'phpmailer/PHPMailer.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/transpo8/public_html/Mail.php on line 3
+[05-Mar-2024 16:45:16 America/Santiago] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home/transpo8/public_html/Mail.php:8
+Stack trace:
+#0 /home/transpo8/public_html/datos.php(14): Mail::enviarCorreo(Array, 'Transportes Nor...', 'Hemos recibido ...')
+#1 {main}
+  thrown in /home/transpo8/public_html/Mail.php on line 8
+[05-Mar-2024 17:47:08 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[05-Mar-2024 17:47:08 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[05-Mar-2024 17:57:21 America/Santiago] PHP Notice:  Undefined index: guests in /home/transpo8/public_html/mail.php on line 11
+[05-Mar-2024 17:57:21 America/Santiago] PHP Notice:  Undefined index: date in /home/transpo8/public_html/mail.php on line 12
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 48
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 54
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 54
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 58
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 62
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 64
+[06-Mar-2024 17:18:11 America/Santiago] PHP Notice:  Undefined index: comments in /home/transpo8/public_html/mails.php on line 76
+[22-Apr-2024 16:32:40 America/Santiago] PHP Warning:  include(slider.html): failed to open stream: No such file or directory in /home/transpo8/public_html/index_test.php on line 111
+[22-Apr-2024 16:32:40 America/Santiago] PHP Warning:  include(slider.html): failed to open stream: No such file or directory in /home/transpo8/public_html/index_test.php on line 111
+[22-Apr-2024 16:32:40 America/Santiago] PHP Warning:  include(): Failed opening 'slider.html' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/transpo8/public_html/index_test.php on line 111
+[22-Apr-2024 16:32:40 America/Santiago] PHP Warning:  include(footer.html): failed to open stream: No such file or directory in /home/transpo8/public_html/index_test.php on line 735
+[22-Apr-2024 16:32:40 America/Santiago] PHP Warning:  include(footer.html): failed to open stream: No such file or directory in /home/transpo8/public_html/index_test.php on line 735
+[22-Apr-2024 16:32:40 America/Santiago] PHP Warning:  include(): Failed opening 'footer.html' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/transpo8/public_html/index_test.php on line 735
