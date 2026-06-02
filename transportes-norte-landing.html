@@ -95,7 +95,27 @@
     .hero-carousel .carousel-dots{position:absolute;left:0;right:0;bottom:.9rem;z-index:3;display:flex;justify-content:center;gap:.5rem}
     .hero-carousel .carousel-dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,.45);cursor:pointer;padding:0;transition:background .2s ease,transform .2s ease}
     .hero-carousel .carousel-dots button.is-active{background:#fff;transform:scale(1.2)}
-    @media (max-width:760px){.hero-carousel .slides{height:clamp(380px,80vh,560px)}.hero-carousel .slide-metrics{grid-template-columns:1fr 1fr}.hero-carousel .slide-actions .btn{width:100%}}
+    @media (max-width:760px){
+      .hero-carousel{background:var(--color-surface);border:1px solid var(--color-border)}
+      .hero-carousel .slides{height:auto;position:relative}
+      .hero-carousel .slide{position:relative;inset:auto;display:none;flex-direction:column;opacity:1;visibility:visible;transition:none}
+      .hero-carousel .slide.is-active{display:flex}
+      .hero-carousel .slide img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;filter:none}
+      .hero-carousel .slide-content{position:relative;height:auto;background:transparent;color:var(--color-text);padding:var(--space-5) var(--space-5) var(--space-10);justify-content:flex-start}
+      .hero-carousel .slide-content .eyebrow{color:var(--color-primary);background:var(--color-primary-highlight)}
+      .hero-carousel .slide-content h1,.hero-carousel .slide-content h2{color:var(--color-text);font-size:var(--text-xl);max-width:100%}
+      .hero-carousel .slide-content p{color:var(--color-text-muted)}
+      .hero-carousel .slide-points span{color:var(--color-text);background:var(--color-surface-2);border-color:var(--color-border);backdrop-filter:none}
+      .hero-carousel .slide-metrics{grid-template-columns:1fr 1fr}
+      .hero-carousel .slide-metrics .metric{background:var(--color-surface-2);border-color:var(--color-border);backdrop-filter:none}
+      .hero-carousel .slide-metrics .metric strong{color:var(--color-text)}
+      .hero-carousel .slide-metrics .metric span{color:var(--color-text-muted)}
+      .hero-carousel .slide-actions .btn{width:100%}
+      .hero-carousel .carousel-btn{top:calc((100vw - 2rem) * 0.272);transform:translateY(-50%)}
+      .hero-carousel .carousel-dots{position:relative;left:auto;right:auto;bottom:auto;padding:.75rem 0 1rem}
+      .hero-carousel .carousel-dots button{background:var(--color-border)}
+      .hero-carousel .carousel-dots button.is-active{background:var(--color-primary)}
+    }
   </style>
 </head>
 <body>
