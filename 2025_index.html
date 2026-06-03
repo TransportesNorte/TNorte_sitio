@@ -77,8 +77,8 @@
           <div class="slide-wrap">
             <div class="slide-content">
               <div class="container">
-                <h1 class="font-medium">Logisitica Innovadora<br>al servicio de tus desafios</h1>
-                <h5>Somos una empresa con una logistica espcializada en resolver problemas de forma transparente y efectiva.</h5>
+                <h1 class="font-medium">Logística Innovadora<br>al servicio de tus desafios</h1>
+                <h5>Somos una empresa con una logística especializada en resolver problemas de forma transparente y efectiva.</h5>
                 
                 </p>
               </div>
@@ -111,24 +111,8 @@
             </div>
           </div>
         </li>
-        <li>
-          <img src="images/pol-slide.jpg" alt="">
-          <div class="slide-wrap">
-            <div class="slide-content">
-              <div class="container">
-                <a style="text-decoration:none; color:inherit" href="https://transportesnorte.cl/calidad.html" target="_blank"><h1 class="font-medium">Conoce nuestra política de calidad.</h1>
-                <h5>Haz click aquí para ver nuestros valores como empresa.</h5></a>
-                
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
        
-        .no-link-style a {
-          color: inherit;
-          text-decoration: none;
-        }
+       
       </ul>
     </div>
     <section>
@@ -165,8 +149,8 @@
         </div>
         <div class="col-sm-6 col-md-4">
           <div class="icon-box-basic"><i class="hc-cup"></i>
-            <a href="https://transportesnorte.cl/calidad.html" target="_blank"><h4>Politica de Calidad</h4></a><a href="https://transportesnorte.cl/calidad.html" target="_blank">
-            <p>Contamos con altos estandares y certificaciones necesarias para garantizar calidad en nuestros servicios de transporte</p></a>
+            <h4>Politica de Calidad</h4>
+            <p>Contamos con altos estandares y certificaciones necesarias para garantizar calidad en nuestros servicios de transporte</p>
           </div>
         </div>
       </div>
@@ -184,7 +168,10 @@
               <p><b>Flexibilidad y Adaptabilidad:</b> Somos flexibles y capaces de adaptarnos rápidamente a los cambios del mercado y a las necesidades de nuestros clientes.</p>
               <p><b>Atención Personalizada:</b> La atención personalizada es una característica distintiva, nuestros clientes reciben un trato más cercano y directo por parte de los propietarios y empleados de la empresa.</p>
               <p><b>Innovación y Tecnología:</b> Contamos con tecnologías y prácticas innovadoras para mejorar la eficiencia operativa y la calidad del servicio.</p>
-              <p><b>Compromiso con la Calidady la Seguridad:</b> La calidad de nuestro servicio y la seguridad en el transporte de carga son nuestras prioridades fundamentales, contribuyen a nuestra reputación y credibilidad en el mercado.</p>
+              <p><b>Compromiso con la Calidad y la Seguridad:</b> La calidad de nuestro servicio y la seguridad en el transporte de carga son nuestras prioridades fundamentales, contribuyen a nuestra reputación y credibilidad en el mercado.</p>
+              <p><b><a href="/images/calidad.jpg">Politica de Calidad. <img src="images/linke.svg"></a>
+              <p><b><a href="/images/vision.jpg">Visión y Misión. <img src="images/linke.svg"></a>
+              <p><b><a href="/images/Acuerdo de Privacidad TN.pdf">Politica de Privacidad. <img src="images/linke.svg"></a>
 
             </div>
            
@@ -284,7 +271,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onSubmit="document.getElementById('submit').disabled=true;">
+                                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onSubmit="document.getElementById('submit').disabled=true;">
                   <input type="hidden" name="access_key" value="d4374143-8b1b-46a1-8337-a815fa752291">
                   <input type="hidden" name="subject" value="Nuevo mensaje del formulario de contacto en transportesnorte.cl">
                   <input type="hidden" name="from_name" id="from_name_input" value="transportesnorte.cl">
@@ -301,14 +288,15 @@
                    <div>
                   <label>Resuelva: </label>
         <span id="captcha-question"></span>
-        <input type="text" id="captcha" required>
-                   </div><br>
+        <input class="form-control" type="text" id="captcha" required>
+                   </div> <br>
+                  <span class="tooltip-wrapper">
                   <div class="form-group">
                     <button class="btn btn-color-out" id="submit" type="submit" disabled>Enviar</button>
+                        <span  id="span" class="tooltip-text">Debe resolver la operación matematica para enviar</span>
+                        </span>
                   </div>
                 </form>
-                
-                 
    <script>
         let expectedResult;
 
@@ -323,11 +311,15 @@
         const validateCaptcha = () => {
             const userInput = parseInt(document.getElementById('captcha').value);
             const submitButton = document.getElementById('submit');
+            const span = document.getElementById('span');
+
 
             if (userInput === expectedResult) {
                 submitButton.disabled = false; // Enable the submit button
+                span.hidden = true; 
             } else {
                 submitButton.disabled = true; // Keep the submit button disabled
+                span.hidden = false; 
             }
         };
 
@@ -348,13 +340,13 @@
                   <p>+56 9 49884100</p>
                 </div>
                 <div class="icon-box-basic"><i class="hc-mail"></i>
-                  <h4>Correo</h4>
+                  <h4>Correo Ventas</h4>
                   <p>jcurinao@transportesnorte.cl
                     <br>contactenos@transportesnorte.cl</p>
                 </div>
                 <div class="icon-box-basic"><i class="hc-mail"></i>
-                  <h4>Consultas</h4>
-                  <p>reclamosysugerencias@transportesnorte.cl</p>
+                  <h4>Reclamos y Sugerencias</h4>
+                  <p>reclamosysugerencias@transportesnorte.cl
                 </div>
               </div>
             </div>
@@ -375,7 +367,7 @@
                     <p>
                       <span>Los Eucaliptos #700, bodega 21, Quilicura, Santiago</span>
                     </p>
-                    <h5>+56-992301634</h5>
+                    <h5>+56 9 49884100</h5>
                     
                   </div>
                 </div>
@@ -429,7 +421,7 @@
     <footer id="footer">
       <div class="container">
         <div class="copy-text">
-          <p>© 2024 Transportes Norte todos los derechos reservados.</p>
+          <p>© 2026 Transportes Norte todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
